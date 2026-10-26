@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Mi lista de reproducción</title>
+  </head>
+  <body>
+    <!--
+      Estructura de la página de la PARTE 3. NO LA MODIFIQUES:
+      los tests cargan este mismo HTML y buscan los elementos por su id.
+    -->
+    <h1>Mi lista de reproducción</h1>
+
+    <form id="form-cancion">
+      <input id="titulo" name="titulo" placeholder="Título" required />
+      <input id="artista" name="artista" placeholder="Artista" required />
+      <select id="genero" name="genero">
+        <option value="rock">rock</option>
+        <option value="pop">pop</option>
+        <option value="jazz">jazz</option>
+      </select>
+      <input id="duracion" name="duracion" type="number" min="1" placeholder="Segundos" required />
+      <button type="submit">Añadir</button>
+    </form>
+
+    <ul id="lista"></ul>
+
+    <p>Duración total: <span id="total">0:00</span></p>
+
+    <button id="deshacer" type="button">Deshacer la última</button>
+  </body>
+</html>
