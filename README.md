@@ -37,6 +37,7 @@ src/
   interfaz.js    PARTE 3 · la escribes tú
   api.js         servidor simulado        (no se toca)
 index.html       estructura de la página  (no se toca)
+NOTAS.md         chuleta de JavaScript para consultar
 tests/           tests y cálculo de nota  (no se tocan)
 ```
 
@@ -182,40 +183,12 @@ La **revisión del profesor** comprueba lo que un test no puede ver:
 
 ---
 
-## 5 · Pistas de sintaxis
+## 5 · Notas de referencia
 
-Una chuleta mínima, porque no tienes internet. No son soluciones.
-
-```js
-// Rellenar con ceros por la izquierda
-String(5).padStart(2, '0');                 // '05'
-
-// Métodos de array
-[1, 2, 3].filter((n) => n > 1);             // [2, 3]
-[1, 2, 3].map((n) => n * 10);               // [10, 20, 30]
-[1, 2, 3].reduce((acc, n) => acc + n, 0);   // 6
-[1, 2, 3].findIndex((n) => n === 2);        // 1
-lista.splice(posicion, 1);                  // quita 1 elemento en esa posición
-
-// Una función flecha que devuelve otra función
-const multiplicarPor = (n) => (x) => x * n;
-multiplicarPor(3)(5);                       // 15
-
-// Promesas
-new Promise((resolve, reject) => { /* ... */ resolve(valor); });
-promesa.then((valor) => /* ... */).catch((error) => /* ... */);
-const f = async () => { try { const v = await promesa; } catch (e) { } };
-
-// DOM
-const li = document.createElement('li');
-li.textContent = 'texto';
-li.dataset.id = 7;                          // <li data-id="7">
-ul.append(li);
-ul.replaceChildren();                       // vacía el elemento
-elemento.addEventListener('click', (evento) => { /* ... */ });
-evento.target.closest('li');                // el <li> más cercano hacia arriba
-formulario.addEventListener('submit', (e) => { e.preventDefault(); });
-```
+Como no tienes internet, en [`NOTAS.md`](NOTAS.md) tienes una chuleta con lo
+que vas a necesitar: funciones flecha, métodos de array y sus parámetros,
+temporizadores, cómo se crea y se consume una promesa, el DOM y los eventos.
+Los ejemplos no son la solución de ningún ejercicio.
 
 ---
 
